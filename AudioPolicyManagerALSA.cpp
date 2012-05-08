@@ -142,7 +142,7 @@ uint32_t AudioPolicyManager::getDeviceForStrategy(routing_strategy strategy, boo
         //FM stream to speaker.
         switch (mForceUse[AudioSystem::FOR_MEDIA]) {
         default:{
-            uint32_t device2 = mAvailableOutputDevices & AudioSystem::DEVICE_OUT_PROXY;
+            uint32_t device2 = 0;
             if(device2 != 0) {
                 // No combo device allowed with proxy device
                 device = 0;

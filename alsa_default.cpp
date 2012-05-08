@@ -291,9 +291,6 @@ void switchDevice(alsa_handle_t *handle, uint32_t devices, uint32_t mode)
         } else if (devices & AudioSystem::DEVICE_OUT_AUX_DIGITAL) {
             devices = devices | (AudioSystem::DEVICE_OUT_AUX_DIGITAL |
                       AudioSystem::DEVICE_IN_AUX_DIGITAL);
-        } else if (devices & AudioSystem::DEVICE_OUT_PROXY) {
-            devices = devices | (AudioSystem::DEVICE_OUT_PROXY |
-                      AudioSystem::DEVICE_IN_BUILTIN_MIC);
         }
     }
 
@@ -923,8 +920,6 @@ char *getUCMDevice(uint32_t devices, int input)
             return strdup(curRxUCMDevice);
         } else if (devices & AudioSystem::DEVICE_OUT_AUX_DIGITAL) {
             return strdup(SND_USE_CASE_DEV_HDMI); /* HDMI RX */
-        } else if (devices & AudioSystem::DEVICE_OUT_PROXY) {
-            return strdup(SND_USE_CASE_DEV_PROXY_RX); /* PROXY RX */
         } else if (devices & AudioSystem::DEVICE_OUT_FM_TX) {
             return strdup(SND_USE_CASE_DEV_FM_TX); /* FM Tx */
         } else if (devices & AudioSystem::DEVICE_OUT_DEFAULT) {
