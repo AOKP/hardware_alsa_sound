@@ -1,0 +1,8 @@
+Change-Id: I0111dd45d388e1f3b1bd7e961431c98cc7831bb0
+Code-Review+2: Jacob Bell <fzservers@gmail.com>
+Verified+1: Jacob Bell <fzservers@gmail.com>
+Submitted-by: Jacob Bell <fzservers@gmail.com>
+Submitted-at: Wed, 16 May 2012 05:31:31 -0500
+Reviewed-on: http://gerrit.sudoservers.com/837
+Project: AOKP/hardware_alsa_sound
+Branch: refs/heads/ics
